@@ -1,0 +1,35 @@
+.card {
+  width: 580px;
+  padding: 40px;
+  background-color: $gray-black;
+  border-radius: 8px;
+  &__title {
+    margin-bottom: 20px;
+    font-family: "Gogh", sans-serif;
+    font-weight: 800;
+    line-height: 1;
+    font-size: 56px;
+    color: $color1-light;
+  }
+  &__subtitle {
+    font-size: $t2;
+    color: $gray-white;
+  }
+}
+/*Tablet*/
+@media (max-width:1451px) {
+  .card{
+    width: 520px;
+  }
+}
+/*Mobile*/
+@media (max-width:1365px) {
+  .card{
+    width: 100%;
+    padding: 20px;
+    &__title{
+      margin-bottom: 12px;
+      font-size: 32px;
+    }
+  }
+}

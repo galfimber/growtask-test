@@ -1,0 +1,21 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: $gray-white;
+  box-shadow: 0px 0px 25px rgba(5, 25, 25, 0.08);
+  &__menu {
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+/*Mobile*/
+@media (max-width:1365px) {
+  .header{
+    &__menu{
+      height: 64px;
+    }
+  }
+}

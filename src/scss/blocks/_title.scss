@@ -1,0 +1,18 @@
+.title{
+    color: $gray-black;
+    &--green{
+        color: $color1-dark;
+    }
+    &--white{
+        color: $gray-white;
+    }
+}
+.subtitle{
+    font-size: $t1;
+}
+/*Mobile*/
+@media (max-width:1365px) {
+    .subtitle{
+        font-size: $t2;
+    }
+}

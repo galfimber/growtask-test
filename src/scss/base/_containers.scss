@@ -1,0 +1,25 @@
+//Container
+.container {
+  max-width: 1452px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+  /*Tablet*/
+  @media (max-width: 1451px) {
+    width: 1366px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  /*Mobile*/
+  @media (max-width: 1365px) {
+    width: 768px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  /*Mobile XS*/
+  @media (max-width: 767px) {
+    width: 374px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

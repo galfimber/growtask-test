@@ -1,0 +1,75 @@
+.slider {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  &__header {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    display: flex;
+    column-gap: 12px;
+  }
+  &__item {
+    position: relative;
+    border: 2px solid $gray-light;
+    border-radius: 8px;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 48px);
+      border-radius: 8px;
+      transition: background-color 0.2s ease-in;
+    }
+    &:hover {
+      .slider__text {
+        background-color: $color1-main;
+      }
+      background-color: rgba(0, 0, 0, 0.1);
+      &::after {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+    &:active {
+      .slider__text {
+        background-color: $color1-dark;
+        transition: background-color 0s ease-in;
+      }
+      &::after {
+        background-color: rgba(0, 0, 0, 0.2);
+        transition: background-color 0s ease-in;
+      }
+    }
+  }
+  &__img {
+    border-radius: 8px;
+  }
+  &__text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    background-color: $gray-black;
+    border-radius: 8px;
+    text-align: center;
+    font-size: $t2;
+    font-weight: $tb;
+    color: $gray-white;
+    transition: background-color 0.2s ease-in;
+  }
+}
+/*Mobile*/
+@media (max-width: 1365px) {
+  .slider {
+    padding-top: 80px;
+    margin-top: -40px;
+    padding-bottom: 80px;
+    &__btn {
+      display: none;
+    }
+  }
+}

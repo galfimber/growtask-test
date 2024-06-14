@@ -1,0 +1,86 @@
+.form {
+  position: relative;
+  z-index: 2;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background-color: $gray-white;
+  border-radius: 8px;
+  &__input {
+    display: flex;
+    gap: 20px;
+    flex-flow: wrap;
+  }
+  &__send {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  &__checkbox {
+    display: none;
+    &:checked + label:hover span {
+      background-image: url("./../img/icon/check-active-hover.svg");
+    }
+    &:checked + label span {
+      background-image: url("./../img/icon/check-active.svg");
+    }
+  }
+  &__check {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    cursor: pointer;
+    &:hover {
+      .form__check--fake {
+        background-image: url("./../img/icon/check-hover.svg");
+      }
+    }
+    &--error{
+      color: $error;
+    }
+  }
+  &__check--fake {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url("./../img/icon/check-static.svg");
+  }
+}
+/*Mobile*/
+@media (max-width: 1365px) {
+  .form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 16px;
+    padding-left: 16px;
+    &__input {
+      gap: 12px;
+    }
+    &__send {
+      gap: 16px;
+    }
+  }
+}
+/*Mobile XS*/
+@media (max-width:767px) {
+  .form {
+    width: 100%;
+    &__input {
+      flex-direction: column;
+    }
+    &__send {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      button {
+        align-self: stretch;
+      }
+    }
+  }
+  
+}
